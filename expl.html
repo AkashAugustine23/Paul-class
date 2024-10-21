@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            let f1 = (a, b) => {
+                let total = 0;
+                for (let items in a) {
+                    if (b[items] != undefined) {
+                        total += a[items] * b[items];
+                    }
+                }
+                return total;
+            }
+
+            let a = {};
+            let b = {};
+            
+            let getUserInput = () => {
+                let numFruits = prompt("How many types of fruits do you want to enter?");
+                numFruits = parseInt(numFruits);
+                
+                for (let i = 0; i < numFruits; i++) {
+                    let fruit = prompt(`Enter the name of fruit ${i+1}:`);
+                    let quantity = parseFloat(prompt(`Enter the quantity of ${fruit}:`));
+                    let price = parseFloat(prompt(`Enter the price per unit of ${fruit}:`));
+                    
+                    a[fruit] = quantity;  
+                    b[fruit] = price;    
+                }
+                
+                alert("Total cost: " + f1(a, b));
+            }
+
+            getUserInput();
+        </script>
+    </head>
+</html>
