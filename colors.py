@@ -1,5 +1,5 @@
-colors = ['red', 'green', 'blue', 'black']
-for color in colors:
-        print(color, "is a color")
-        colors.remove(color)
-print colors
+colours = ['red', 'green', 'blue', 'black']
+for colour in colours:
+        print(colour, "is a colour")
+        colours.remove(colour)
+print colours
